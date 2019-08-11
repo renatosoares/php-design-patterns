@@ -1,0 +1,23 @@
+@startuml
+note "Difference between the use of inheritance and the use of composition." as N1
+
+namespace App.DesignPatternsBasics.Inheritance #DDDDDD {
+    class Client
+    class DoMath
+    class InheritMath
+    InheritMath --|> DoMath
+    Client --> InheritMath
+
+}
+
+namespace App.DesignPatternsBasics.Composition {
+    class Client
+    class DoMath
+    class InheritMath
+
+    Client --> DoMath
+    Client --> InheritMath
+}
+
+@enduml
+
